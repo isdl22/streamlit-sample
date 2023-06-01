@@ -57,7 +57,7 @@ def predict_strengths(path, model_path):
 
 
 def ask_question(question):
-    openai.api_key = "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"
+    openai.api_key = ""
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -70,7 +70,7 @@ def ask_question(question):
 
 path = "C:/Users/endlo/Desktop/etc/Lpoint/"
 model_path = "C:/Users/endlo/Desktop/etc/Lpoint/model/"
-api_key = "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"
+api_key = ""
 
 ## ML 예측 결과 ##
 st.title("AI 강점 예측 시스템")
