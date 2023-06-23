@@ -15,7 +15,7 @@ def show_random_results():
     selected_dictation = pd.DataFrame()
     
     for category in random_categories:
-        # 대분류에 해당하는 데이터 랜덤으로 2개 선택
+        # 대분류에 해당하는 데이터에서 랜덤으로 2개 선택
         random_questions = random.sample(dictation[dictation['gubun'] == category]['question'].tolist(), 2)
         
         # 선택된 질문을 데이터프레임에 추가
@@ -30,7 +30,7 @@ def show_random_results():
     st.write(pose['pose'].sample(1).values[0])
 
     st.write("3. 구술 문제:")
-    dictation_results = [f"{i+1}. {question}" for i, question in enumerate(selected_dictation['question'])]
+    dictation_results = [f"{i+1}. {question}" for i, question in enumerate(selected_dictation['question'].sample(4))]
     st.write("\n".join(dictation_results))
 
     st.write("\n 실기 포즈 이름:\n")
@@ -38,7 +38,7 @@ def show_random_results():
     st.write("\n".join(pose_name))
 
     st.write("\n 구술 문제 정답:\n")
-    dictation_answer = [f"{i+1}. {answer}" for i, answer in enumerate(selected_dictation['answer'])]
+    dictation_answer = [f"{i+1}. {answer}" for i, answer in enumerate(selected_dictation['answer'].sample(4))]
     st.write("\n".join(dictation_answer))
 
 
