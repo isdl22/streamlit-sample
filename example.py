@@ -21,7 +21,7 @@ def show_random_results():
 
     # 결과 출력
     st.write("1. 실기 자세 문제:")
-    practice_results = [f"  ({i+1}) {name}" for i, name in enumerate(selected_practice['name'])]
+    practice_results = [f"({i+1}) {name}" for i, name in enumerate(selected_practice['name'])]
     st.write("\n".join(practice_results))
 
     st.write("2. 실기 포즈 문제:")
@@ -29,15 +29,15 @@ def show_random_results():
 
 
     st.write("3. 구술 문제:")
-    dictation_results = [f"  ({i+1}) {question}" for i, question in enumerate(selected_dictation['question'])]
+    dictation_results = [f"({i+1}) {question}" for i, question in enumerate(selected_dictation['question'])]
     st.write("\n".join(dictation_results))
 
     st.write("\nSelected Pose answer:\n")
-    pose_name = [f"  ({i+1}) {name}" for i, name in enumerate(selected_pose['name'])]
+    pose_name = [f"({i+1}) {name}" for i, name in enumerate(selected_pose['name'])]
     st.write("\n".join(pose_name))
 
     st.write("\nSelected Dictation answer:\n")
-    dictation_answer = [f"  ({i+1}) {answer}" for i, answer in enumerate(selected_dictation['answer'])]
+    dictation_answer = [f"({i+1}) {answer}" for i, answer in enumerate(selected_dictation['answer'])]
     st.write("\n".join(dictation_answer))
 
 
