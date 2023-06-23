@@ -9,8 +9,10 @@ dictation = pd.read_csv('dictation_1.csv', encoding='ms949')
 
 # 랜덤한 결과 출력하는 함수
 def show_random_results():
-    # 랜덤한 4개의 운동 선택
-    random_practice = random.sample(practice['name'].tolist(), 4)
+    # 대분류별 랜덤한 하나의 항목 선택
+    categories = practice['gubun'].unique()
+    random_practice = [random.choice(practice[practice['gubun'] == category]['name']) for category in categories]
+
     random_pose = random.sample(pose['pose'].tolist(), 1)
 
     # 협회최신규정, 종목소개 중에서 랜덤 질문 1개 선택
