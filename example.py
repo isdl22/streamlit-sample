@@ -45,7 +45,7 @@ def show_random_results():
 
 
 # Streamlit 애플리케이션 구성
-st.title("생활 체육 지도자 2급 실기/구슬 모의 평가")
+st.title("생체사 2급 실기/구슬 모의 평가")
 start_button = st.button("시작")
 
 # Start 버튼이 클릭되면 결과 출력
