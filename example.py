@@ -36,9 +36,9 @@ def show_random_results():
     pose_name = [f"{i+1}. {name}" for i, name in enumerate(selected_pose['name'])]
     st.write("\n".join(pose_name))
 
-    #st.write("\n 구술 문제 정답:\n")
-    #dictation_answer = [f"{i+1}. {answer}" for i, answer in enumerate(selected_dictation['answer'])]
-    #st.write("\n".join(dictation_answer))
+    st.write("\n 구술 문제 정답:\n")
+    dictation_answer = [f"{i+1}. {answer}" for i, answer in enumerate(selected_dictation['answer'])]
+    st.write("\n".join(dictation_answer))
 
 
 # Streamlit 애플리케이션 구성
