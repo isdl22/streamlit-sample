@@ -13,17 +13,17 @@ def show_random_results():
     random_practice = random.sample(practice['name'].tolist(), 4)
     random_pose = random.sample(pose['pose'].tolist(), 1)
 
-    # 협회 최신규정, 종목 소개 중에서 랜덤 질문 1개 선택
-    random_dictation_1 = random.sample(dictation[dictation['gubun_1'].isin(['협회 최신규정', '종목 소개'])]['question'].tolist(), 1)
+    # 협회최신규정, 종목소개 중에서 랜덤 질문 1개 선택
+    random_dictation_1 = random.sample(dictation[dictation['gubun_1'].isin(['협회최신규정', '종목소개'])]['question'].tolist(), 1)
 
-    # 스포츠 인권, 생활 체육 개요 중에서 랜덤 질문 1개 선택
-    random_dictation_2 = random.sample(dictation[dictation['gubun_1'].isin(['스포츠 인권', '생활 체육 개요'])]['question'].tolist(), 1)
+    # 스포츠 인권, 생활체육 개요 중에서 랜덤 질문 1개 선택
+    random_dictation_2 = random.sample(dictation[dictation['gubun_1'].isin(['스포츠 인권', '생활체육 개요'])]['question'].tolist(), 1)
 
-    # 웨이트 트레이닝, 과학적 지도방법 중에서 랜덤 질문 1개 선택
-    random_dictation_3 = random.sample(dictation[dictation['gubun_1'].isin(['웨이트 트레이닝', '과학적 지도방법'])]['question'].tolist(), 1)
+    # 웨이트트레이닝, 과학적 지도방법 중에서 랜덤 질문 1개 선택
+    random_dictation_3 = random.sample(dictation[dictation['gubun_1'].isin(['웨이트트레이닝', '과학적 지도방법'])]['question'].tolist(), 1)
 
-    # 규정 포즈, 응급처치 중에서 랜덤 질문 1개 선택
-    random_dictation_4 = random.sample(dictation[dictation['gubun_1'].isin(['규정 포즈', '응급처치'])]['question'].tolist(), 1)
+    # 규정포즈, 응급처치 중에서 랜덤 질문 1개 선택
+    random_dictation_4 = random.sample(dictation[dictation['gubun_1'].isin(['규정포즈', '응급처치'])]['question'].tolist(), 1)
 
     # 새로운 데이터프레임 생성
     selected_practice = practice[practice['name'].isin(random_practice)]
