@@ -1,7 +1,6 @@
 import pandas as pd
 import random
 import streamlit as st
-import time
 
 # 원본 데이터프레임 생성
 pose = pd.read_csv('pose.csv', encoding='ms949')
@@ -32,8 +31,6 @@ def show_random_results():
     st.write("Selected Dictation:")
     dictation_results = [f"{i+1}. {question}" for i, question in enumerate(selected_dictation['question'])]
     st.write("\n".join(dictation_results))
-
-    time.sleep(15)  # Delay for 15 seconds
 
     st.write("\nSelected Pose answer:\n")
     pose_name = [f"{i+1}. {name}" for i, name in enumerate(selected_pose['name'])]
