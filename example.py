@@ -33,7 +33,7 @@ def show_random_results():
     st.write("\n".join(dictation_results))
 
     st.write("\nSelected Pose answer:\n")
-    pose_name = [f"{i+1}.{name}" for i, name in enumerate(selected_pose['name'])]
+    pose_name = [f"{i+1}. {name}" for i, name in enumerate(selected_pose['name'])]
     st.write("\n".join(pose_name))
 
     st.write("\nSelected Dictation answer:\n")
