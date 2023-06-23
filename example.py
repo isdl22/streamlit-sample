@@ -20,15 +20,15 @@ def show_random_results():
     selected_dictation = dictation[dictation['question'].isin(random_dictation)]
 
     # 결과 출력
-    st.write("실기 자세:")
+    st.write("1. 실기 자세 문제:")
     practice_results = [f"{i+1}. {name}" for i, name in enumerate(selected_practice['name'])]
     st.write("\n".join(practice_results))
 
-    st.write("실기 포즈:")
+    st.write("2. 실기 포즈 문제:")
     st.write(selected_pose.pose.unique()[0])
 
 
-    st.write("구술 질문:")
+    st.write("3. 구술 문제:")
     dictation_results = [f"{i+1}. {question}" for i, question in enumerate(selected_dictation['question'])]
     st.write("\n".join(dictation_results))
 
