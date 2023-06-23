@@ -32,11 +32,11 @@ def show_random_results():
     dictation_results = [f"{i+1}. {question}" for i, question in enumerate(selected_dictation['question'])]
     st.write("\n".join(dictation_results))
 
-    st.write("\nSelected Pose answer:\n")
+    st.write("\n 실기 포즈 이름:\n")
     pose_name = [f"{i+1}. {name}" for i, name in enumerate(selected_pose['name'])]
     st.write("\n".join(pose_name))
 
-    st.write("\nSelected Dictation answer:\n")
+    st.write("\n 구술 문제 정답:\n")
     dictation_answer = [f"{i+1}. {answer}" for i, answer in enumerate(selected_dictation['answer'])]
     st.write("\n".join(dictation_answer))
 
