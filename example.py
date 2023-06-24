@@ -9,9 +9,18 @@ dictation = pd.read_csv('dictation_1.csv', encoding='ms949')
 
 # 랜덤한 결과 출력하는 함수
 def show_random_results():
-    # 대분류별 랜덤한 하나의 항목 선택
-    categories = practice['gubun'].unique()
-    random_practice = [random.choice(practice[practice['gubun'] == category]['name']) for category in categories]
+
+    # 협회최신규정, 종목소개 중에서 랜덤 질문 1개 선택
+    random_practice_1 = random.sample(practice[practice['gubun'].isin(['가슴_팔'])]['name'].tolist(), 1)
+
+    # 스포츠 인권, 생활체육 개요 중에서 랜덤 질문 1개 선택
+    random_practice_2 = random.sample(practice[practice['gubun'].isin(['등_어깨'])]['name'].tolist(), 1)
+
+    # 웨이트트레이닝, 과학적 지도방법 중에서 랜덤 질문 1개 선택
+    random_practice_3 = random.sample(practice[practice['gubun'].isin(['하체'])]['name'].tolist(), 1)
+
+    # 규정포즈, 응급처치 중에서 랜덤 질문 1개 선택
+    random_practice_4 = random.sample(practice[practice['gubun'].isin(['복근'])]['name'].tolist(), 1)
 
     random_pose = random.sample(pose['pose'].tolist(), 1)
 
@@ -28,7 +37,7 @@ def show_random_results():
     random_dictation_4 = random.sample(dictation[dictation['gubun_1'].isin(['규정포즈', '응급처치'])]['question'].tolist(), 1)
 
     # 새로운 데이터프레임 생성
-    selected_practice = practice[practice['name'].isin(random_practice)]
+    selected_practice = practice[practice['name'].isin(random_practice_1 + random_practice_2 + random_practice_3 + random_practice_4)]
     selected_pose = pose[pose['pose'].isin(random_pose)]
     selected_dictation = dictation[dictation['question'].isin(random_dictation_1 + random_dictation_2 + random_dictation_3 + random_dictation_4)]
 
