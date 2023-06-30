@@ -25,10 +25,10 @@ def show_random_results():
     random_pose = random.sample(pose['pose'].tolist(), 1)
 
     # 규정 중에서 랜덤 질문 2개 선택
-    #random_dictation_1 = random.sample(dictation[dictation['gubun'].isin(['규정'])]['question'].tolist(), 2)
+    random_dictation_1 = random.sample(dictation[dictation['gubun'].isin(['규정'])]['question'].tolist(), 2)
 
     # 지도방법 중에서 랜덤 질문 2개 선택
-    #random_dictation_2 = random.sample(dictation[dictation['gubun'].isin(['지도방법'])]['question'].tolist(), 2)
+    random_dictation_2 = random.sample(dictation[dictation['gubun'].isin(['지도방법'])]['question'].tolist(), 2)
 
     
     # 협회최신규정, 종목소개 중에서 랜덤 질문 1개 선택
