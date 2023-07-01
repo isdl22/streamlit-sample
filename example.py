@@ -5,7 +5,7 @@ import streamlit as st
 # 원본 데이터프레임 생성
 pose = pd.read_csv('pose.csv', encoding='ms949')
 practice = pd.read_csv('practice.csv', encoding='ms949')
-dictation = pd.read_csv('dictation_2.csv', encoding='ms949')
+dictation = pd.read_csv('dictation_3.csv', encoding='ms949')
 
 # 랜덤한 결과 출력하는 함수
 def show_random_results():
